@@ -1,0 +1,6 @@
+{
+  "name": "SMK Negeri 13 Pandeglang",
+  "description": "Website Resmi SMK Negeri 13 Pandeglang - Portal Informasi Akademik, Pendaftaran Siswa Baru, dan Dashboard Monitoring Sekolah.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
