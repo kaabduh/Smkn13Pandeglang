@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Newspaper, Image, Calendar, AlertTriangle, ArrowRight, ShieldCheck, Filter, Bell, ExternalLink, RefreshCw } from 'lucide-react';
 import { NewsItem, EmergencyAlert, Language } from '../types';
+// @ts-ignore
+import schoolLogo from '../assets/images/school_logo_1784346350047.jpg';
 import { translations } from '../translations';
 
 interface HomeViewProps {
@@ -25,23 +27,23 @@ export default function HomeView({
   // Default mock gallery items
   const galleryItems = [
     {
-      title: "Kegiatan Lomba Kompetensi Siswa (LKS) Nasional",
-      desc: "Siswa RPL SMKN 13 berkompetisi di tingkat nasional.",
-      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=500&auto=format&fit=crop"
+      title: "Praktik Budidaya Hidroponik ATPH",
+      desc: "Siswa program keahlian Agribisnis Tanaman Pangan dan Hortikultura (ATPH) melakukan praktik pertanian modern.",
+      image: "https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?q=80&w=500&auto=format&fit=crop"
     },
     {
-      title: "Praktik Perakitan Jaringan di Lab Komputer",
-      desc: "Siswa TKJ mempelajari perakitan kabel fiber optik.",
+      title: "Praktik Jaringan Telekomunikasi TJKT",
+      desc: "Siswa program keahlian Teknik Jaringan Komputer dan Telekomunikasi (TJKT) merakit jaringan dan serat optik.",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=500&auto=format&fit=crop"
     },
     {
-      title: "Upacara Peringatan Hari Pendidikan Nasional",
-      desc: "Hikmatnya dewan guru dan seluruh siswa dalam upacara.",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=500&auto=format&fit=crop"
+      title: "Praktik Bengkel Sepeda Motor TSM",
+      desc: "Siswa program keahlian Teknik Sepeda Motor (TSM) mempelajari pemeliharaan mesin & kelistrikan sepeda motor.",
+      image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=500&auto=format&fit=crop"
     },
     {
       title: "Kegiatan Pramuka & Pembinaan Karakter",
-      desc: "Pembentukan karakter siswa tangguh di alam bebas.",
+      desc: "Pembentukan karakter siswa SMKN 13 Pandeglang yang tangguh, mandiri, dan berakhlak mulia di alam bebas.",
       image: "https://images.unsplash.com/photo-1501535033-a598d2bfbd1f?q=80&w=500&auto=format&fit=crop"
     }
   ];
@@ -93,32 +95,44 @@ export default function HomeView({
       )}
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[#4B5E53] text-white rounded-3xl p-8 sm:p-12 lg:p-16 border border-[#E5E2D9] shadow-md">
-        <div className="relative z-10 max-w-3xl flex flex-col gap-6">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 rounded-full text-xs font-semibold backdrop-blur-sm w-fit border border-white/20">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            PPDB TA 2026/2027 Dibuka
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
-            {t.welcomeTitle}
-          </h2>
-          <p className="text-sm sm:text-base text-gray-100 leading-relaxed max-w-xl">
-            {t.welcomeDesc}
-          </p>
-          <div className="flex flex-wrap gap-3 mt-2">
-            <button
-              onClick={() => onNavigate('ppdb')}
-              className="px-6 py-3 bg-[#F1F0E8] hover:bg-[#E5E2D9] text-[#4B5E53] font-bold rounded-xl text-sm shadow transition-all flex items-center gap-2"
-            >
-              <span>Daftar Siswa Baru (PPDB)</span>
-              <ArrowRight size={16} />
-            </button>
-            <button
-              onClick={() => onNavigate('academic')}
-              className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl text-sm border border-white/30 backdrop-blur-sm hover:scale-[1.02] active:scale-95 transition-all"
-            >
-              Cek Nilai Siswa
-            </button>
+      <section className="relative overflow-hidden bg-indigo-600 text-white rounded-3xl p-8 sm:p-12 lg:p-16 border border-slate-200 shadow-md">
+        <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+          <div className="max-w-2xl flex flex-col gap-6">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 rounded-full text-xs font-semibold backdrop-blur-sm w-fit border border-white/20">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              PPDB TA 2026/2027 Dibuka
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
+              {t.welcomeTitle}
+            </h2>
+            <p className="text-sm sm:text-base text-gray-100 leading-relaxed max-w-xl">
+              {t.welcomeDesc}
+            </p>
+            <div className="flex flex-wrap gap-3 mt-2">
+              <button
+                onClick={() => onNavigate('ppdb')}
+                className="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-indigo-700 font-bold rounded-xl text-sm shadow transition-all flex items-center gap-2 cursor-pointer"
+              >
+                <span>Daftar Siswa Baru (PPDB)</span>
+                <ArrowRight size={16} />
+              </button>
+              <button
+                onClick={() => onNavigate('academic')}
+                className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl text-sm border border-white/30 backdrop-blur-sm hover:scale-[1.02] active:scale-95 transition-all cursor-pointer"
+              >
+                Cek Nilai Siswa
+              </button>
+            </div>
+          </div>
+
+          {/* School Logo */}
+          <div className="shrink-0 flex items-center justify-center p-3 bg-white rounded-full border-4 border-slate-200 shadow-2xl w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 transform hover:scale-105 transition-all duration-300">
+            <img
+              src={schoolLogo}
+              alt="Logo SMK Negeri 13 Pandeglang"
+              className="w-full h-full object-contain rounded-full"
+              referrerPolicy="no-referrer"
+            />
           </div>
         </div>
         {/* Abstract decorative background vector */}

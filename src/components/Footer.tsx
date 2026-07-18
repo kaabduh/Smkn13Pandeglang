@@ -41,7 +41,7 @@ export default function Footer({ language }: FooterProps) {
             <ul className="flex flex-col gap-3 text-sm text-gray-400">
               <li className="flex items-start gap-2.5">
                 <MapPin size={16} className="text-blue-500 shrink-0 mt-1" />
-                <span>Jl. Raya Saketi - Munjul Km. 07, Sindanghayu, Kec. Saketi, Kabupaten Pandeglang, Banten 42273</span>
+                <span>Jl. Raya Pir V Kp. Koranji, Desa Pasirgadung, Kec. Patia, Kabupaten Pandeglang, Banten 42265</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone size={16} className="text-blue-500 shrink-0" />

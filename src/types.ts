@@ -3,7 +3,7 @@ export interface Student {
   name: string;
   nisn: string;
   kelas: string;
-  jurusan: 'RPL' | 'TKJ' | string;
+  jurusan: 'ATPH' | 'TJKT' | 'TSM' | string;
   grades: {
     [subject: string]: number;
   };

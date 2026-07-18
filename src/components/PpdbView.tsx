@@ -25,7 +25,7 @@ export default function PpdbView({ ppdbList, onRegisterSubmit, language }: PpdbV
   const [nisn, setNisn] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('08567150026'); // Pre-populated with requested targeted mobile number
-  const [selectedJurusan, setSelectedJurusan] = useState('RPL');
+  const [selectedJurusan, setSelectedJurusan] = useState('ATPH');
   const [sourceSchool, setSourceSchool] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -216,9 +216,9 @@ export default function PpdbView({ ppdbList, onRegisterSubmit, language }: PpdbV
                       onChange={(e) => setSelectedJurusan(e.target.value)}
                       className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 text-sm border-0 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 rounded-xl text-gray-800 dark:text-white transition-all"
                     >
-                      <option value="RPL">Rekayasa Perangkat Lunak (RPL)</option>
-                      <option value="TKJ">Teknik Komputer & Jaringan (TKJ)</option>
-                      <option value="AKL">Akuntansi Keuangan Lembaga (AKL)</option>
+                      <option value="ATPH">Agribisnis Tanaman Pangan dan Hortikultura (ATPH)</option>
+                      <option value="TJKT">Teknik Jaringan Komputer dan Telekomunikasi (TJKT)</option>
+                      <option value="TSM">Teknik Sepeda Motor (TSM)</option>
                     </select>
                   </div>
                 </div>

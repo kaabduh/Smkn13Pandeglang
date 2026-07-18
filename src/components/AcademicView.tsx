@@ -109,7 +109,7 @@ export default function AcademicView({ students, schedules, language }: Academic
         <body>
           <div class="header">
             <h1>SMK NEGERI 13 PANDEGLANG</h1>
-            <p>Jl. Raya Saketi - Munjul Km. 07, Sindanghayu, Kabupaten Pandeglang, Banten 42273</p>
+            <p>Jl. Raya Pir V Kp. Koranji, Desa Pasirgadung, Kec. Patia, Kabupaten Pandeglang, Banten 42265</p>
             <p>Email: info@smkn13pandeglang.sch.id | Telp: (0253) 401313</p>
           </div>
           
@@ -153,8 +153,8 @@ export default function AcademicView({ students, schedules, language }: Academic
             <p>Pandeglang, ${new Date().toLocaleDateString('id-ID')}</p>
             <p>Kepala Sekolah SMKN 13</p>
             <br><br><br>
-            <p><strong>Drs. H. Mulyadi, M.Pd.</strong></p>
-            <p>NIP. 197402122003121002</p>
+            <p><strong>H.M. Wahyu Surya Sukma Sejati, ST., M.MT</strong></p>
+            <p>NIP. -</p>
           </div>
 
           <script>
@@ -419,7 +419,7 @@ export default function AcademicView({ students, schedules, language }: Academic
                 <span>Analitik Performa Akademik Siswa</span>
               </h3>
               <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
-                Pemantauan rata-rata nilai mata pelajaran kejuruan (RPL & TKJ) serta persentase kehadiran siswa se-kabupaten secara real-time.
+                Pemantauan rata-rata nilai mata pelajaran kejuruan (ATPH, TJKT, & TSM) serta persentase kehadiran siswa se-kabupaten secara real-time.
               </p>
             </div>
 
